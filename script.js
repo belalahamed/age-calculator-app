@@ -6,17 +6,15 @@ const years = document.getElementById("years");
 const months = document.getElementById("months");
 const days = document.getElementById("days");
 
-
 // Function to convert date string to date object
 function toDateObject() {
   const dateOfBirth = new Date(dateOfBirthInput.value);
   const ageAtDate = new Date(ageAtDateInput.value);
 
   const dates = separateDateMonthYear(dateOfBirth, ageAtDate);
-  
+
   return dates;
 }
-
 
 // Function to extract individual date, month and year from date objects
 function separateDateMonthYear(dateOfBirth, ageAtDate) {
@@ -37,16 +35,13 @@ function separateDateMonthYear(dateOfBirth, ageAtDate) {
     ageAtDateYear: ageAtDateYear,
     ageAtDateMonth: ageAtDateMonth,
     ageAtDateDate: ageAtDateDate,
-  }
+  };
 
   return dates;
 }
 
-
-
 // Funnction to calculate age
 function calculateAge() {
-
   // Checking whether input is or not on both the fields
   if (!dateOfBirthInput.value || !ageAtDateInput.value) {
     alert("Select date at both the fields");
@@ -61,7 +56,10 @@ function calculateAge() {
     return;
   }
 
-  if (dates.ageAtDateYear === dates.birthYear && dates.ageAtDateMonth < dates.birthMonth) {
+  if (
+    dates.ageAtDateYear === dates.birthYear &&
+    dates.ageAtDateMonth < dates.birthMonth
+  ) {
     alert("DOB month should be lesser!!");
     return;
   }
@@ -104,7 +102,7 @@ function renderAge(ageYears, ageMonths, ageDays) {
   months.innerText = `${ageMonths} Months`;
   days.innerText = `${ageDays} Days`;
 
-  dobInput.value = "";
+  dateOfBirthInput.value = "";
   ageAtDateInput.value = "";
 }
 
