@@ -13,27 +13,33 @@
     />
   </head>
   <body>
-    <div class="app-container">
-      <h1 class="app-title">AGE CALCULATOR</h1>
-      <div class="form-container">
-        <form action="" class="age-calculate-form">
-          <div class="dob-input form-input">
-            <label for="">Date of Birth</label>
-            <input type="date" name="DOB" id="dob" />
-          </div>
-          <div class="age-at-date-input form-input">
-            <label for="date">Age on</label>
-            <input type="date" name="date" id="age-at-date" />
-          </div>
-          <button type="button" id="calculate-btn">Calculate</button>
-        </form>
+    <div class="main">
+      <div class="app-container">
+        <h1 class="app-title">AGE CALCULATOR</h1>
+        <div class="form-container">
+          <form action="" class="age-calculate-form">
+            <div class="dob-input form-input">
+              <label for="">Date of Birth</label>
+              <input type="date" name="DOB" id="dob" />
+            </div>
+            <div class="age-at-date-input form-input">
+              <label for="date">Age on</label>
+              <input type="date" name="date" id="age-at-date" />
+            </div>
+            <button type="button" id="calculate-btn">Calculate</button>
+          </form>
+        </div>
+        <div class="result-container">
+          <h2>Your Age:</h2>
+          <p id="years"></p>
+          <p id="months"></p>
+          <p id="days"></p>
+        </div>
       </div>
-      <div class="result-container">
-        <h2>Your Age:</h2>
-        <p id="years"></p>
-        <p id="months"></p>
-        <p id="days"></p>
-      </div>
+    </div>
+
+    <div class="footer">
+      <p>Made with ❤️ by <span>Belal Ahamed</span></p>
     </div>
 
     <script src="script.js"></script>

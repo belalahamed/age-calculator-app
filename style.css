@@ -7,9 +7,10 @@
 body {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  flex-direction: column;
 }
 
 .app-container {
@@ -45,12 +46,11 @@ body {
   gap: 0.8rem;
 }
 
-.form-input label{
+.form-input label {
   color: #6965db;
   font-weight: 500;
   font-size: 1rem;
 }
-
 
 .form-input input {
   width: 100%;
@@ -89,4 +89,35 @@ body {
 .result-container p {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.footer p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer span{
+  color: #6965db;
+}
+
+@media (max-width: 540px) {
+  .app-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0rem;
+    box-shadow: none;
+  }
+
+  .result-container {
+    gap: 0.5rem;
+  }
+
+  .result-container h2,
+  p {
+    font-size: 1rem;
+  }
 }
