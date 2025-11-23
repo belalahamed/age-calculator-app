@@ -38,14 +38,16 @@ function calculateAge() {
 
   if (ageAtDateYear === dobYear) {
     if (ageAtDateMonth < dobMonth) {
-      alert("DOB month should be lesser!!")
+      alert("DOB month should be lesser!!");
     }
+    return;
   }
 
   if (ageAtDateYear === dobYear && ageAtDateMonth === dobMonth) {
     if (ageAtDateDate < dobDate) {
       alert("DOB date should be lesser!!")
     }
+    return;
   }
 
   // Age calculation logic
