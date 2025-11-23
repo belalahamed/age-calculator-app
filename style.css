@@ -101,6 +101,10 @@ body {
 }
 
 @media (max-width: 540px) {
+  body{
+    justify-content: center;
+  }
+
   .app-container {
     width: 100vw;
     height: 80vh;
